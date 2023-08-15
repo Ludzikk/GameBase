@@ -1,0 +1,121 @@
+@use "./colors" as *;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	font-size: 1.6rem;
+	background-color: #333;
+}
+
+.wrapper {
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 10vh;
+
+	&__title {
+		font-size: 3rem;
+		color: white;
+	}
+
+	&__icon {
+		color: $orange;
+	}
+
+	&__button {
+		font-size: 3rem;
+		border: none;
+		background-color: transparent;
+		color: white;
+		cursor: pointer;
+		transition: transform 0.5s, color 0.5s;
+
+		&:hover {
+			transform: scale(1.25);
+			color: #dedede;
+		}
+	}
+}
+
+.main {
+	padding: 2em 0;
+
+	&__section {
+		color: white;
+
+		&-name {
+			font-size: 5rem;
+			padding: 1em;
+			text-align: center;
+			letter-spacing: 2px;
+		}
+
+		&-list {
+			// margin: 2em 0;
+			display: flex;
+			justify-content: space-around;
+			flex-wrap: wrap;
+			list-style: none;
+		}
+
+		&-item {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+			width: 450px;
+			height: 350px;
+			margin: 0.5em;
+			padding-bottom: 0.5em;
+			overflow: hidden;
+			border: 1px solid $orange;
+			border-radius: 15px;
+			font-size: 2.4rem;
+			cursor: pointer;
+			transition: transform 0.5s;
+
+			&:hover {
+				transform: scale(1.025);
+			}
+
+			&-img {
+				object-fit: cover;
+				object-position: center;
+				width: 100%;
+				height: 50%;
+			}
+
+			&-name {
+				padding-top: 0.15em;
+				text-align: center;
+			}
+
+			&-stats {
+				display: flex;
+				justify-content: space-around;
+				width: 100%;
+				padding: 0.2em 0;
+				font-size: 1.8rem;
+			}
+
+			&-relesedate {
+				font-size: 1.4rem;
+			}
+		}
+	}
+}
