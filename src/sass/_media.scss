@@ -1,11 +1,44 @@
 @media (min-width: 1200px) {
 	.main {
-
 		&__section {
-
 			&-name {
-			
 				text-align: left;
+			}
+
+			&-item {
+				width: 450px;
+			height: 350px;
+			}
+		}
+	}
+	.mainsub {
+		&__section {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			height: 85vh;
+			color: white;
+
+			&-left {
+				display: flex;
+				align-items: center;
+				width: 60%;
+				padding: 1em;
+			}
+
+			&-right {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				width: 40%;
+				padding-bottom: 0em;
+			}
+
+			&-img {
+				height: auto;
+				width: 100%;
+				object-fit: cover;
+				border-radius: 15px;
 			}
 		}
 	}
