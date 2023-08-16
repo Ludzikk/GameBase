@@ -10,8 +10,13 @@ html {
 	font-size: 62.5%;
 }
 
+button,
+a,
 body {
 	font-family: "Poppins", sans-serif;
+}
+
+body {
 	font-size: 1.6rem;
 	background-color: #333;
 }
@@ -28,6 +33,18 @@ body {
 	align-items: center;
 	height: 10vh;
 
+	&__link {
+		font-size: 2.4rem;
+		text-decoration: none;
+		color: white;
+		transition: transform 0.5s, color 0.5s;
+
+		&:hover {
+			transform: scale(1.1);
+			color: #dedede;
+		}
+	}
+
 	&__title {
 		font-size: 3rem;
 		color: white;
@@ -35,20 +52,6 @@ body {
 
 	&__icon {
 		color: $orange;
-	}
-
-	&__button {
-		font-size: 3rem;
-		border: none;
-		background-color: transparent;
-		color: white;
-		cursor: pointer;
-		transition: transform 0.5s, color 0.5s;
-
-		&:hover {
-			transform: scale(1.25);
-			color: #dedede;
-		}
 	}
 }
 
@@ -58,10 +61,22 @@ body {
 	&__section {
 		color: white;
 
+		&-top {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		&-rawg {
+			padding: 0 2em;
+			text-decoration: none;
+			color: white;
+			text-transform: uppercase;
+		}
+
 		&-name {
 			font-size: 5rem;
 			padding: 1em;
-			text-align: center;
 			letter-spacing: 2px;
 		}
 
@@ -86,6 +101,8 @@ body {
 			border: 1px solid $orange;
 			border-radius: 15px;
 			font-size: 2.4rem;
+			text-decoration: none;
+			color: white;
 			cursor: pointer;
 			transition: transform 0.5s;
 
@@ -115,6 +132,69 @@ body {
 
 			&-relesedate {
 				font-size: 1.4rem;
+			}
+		}
+	}
+}
+
+.mainsub {
+	&__section {
+		display: flex;
+		height: 85vh;
+		color: white;
+
+		&-left {
+			width: 60%;
+			padding: 1em;
+		}
+
+		&-right {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			width: 40%;
+		}
+
+		&-img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+			border-radius: 15px;
+		}
+
+		&-name {
+			font-size: 3.2rem;
+			text-align: center;
+		}
+
+		&-stats {
+			display: flex;
+			justify-content: space-around;
+			padding: 2em 1em;
+		}
+
+		&-list {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			list-style-type: none;
+		}
+
+		&-item {
+			width: 300px;
+			height: 150px;
+			margin: 0.5em;
+		}
+
+		&-ss {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			cursor: pointer;
+			transition: transform .5s;
+
+			&:hover {
+				transform: scale(1.05);
 			}
 		}
 	}

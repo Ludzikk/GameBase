@@ -16,6 +16,7 @@ items.forEach((item) => {
 			playTime.textContent =
 				"Playtime" + " " + data.results[currentItemNum].playtime + " h";
 			realeseDate.textContent = data.results[currentItemNum].released;
+			item.setAttribute("href", `./games/${data.results[currentItemNum].id}.html`)
 
 			currentItemNum++;
 
